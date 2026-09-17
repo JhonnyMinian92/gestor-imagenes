@@ -1,0 +1,12 @@
+# --- H4: Security Hardening - Apache Configuration ---
+
+# The 'ServerTokens Prod' directive is not allowed in .htaccess files and
+# must be set in the main server configuration (e.g., httpd.conf).
+# Leaving it here causes a 500 Internal Server Error.
+
+# Hide server version information from server-generated error pages.
+ServerSignature Off
+
+# B2: prevent directory listing anywhere under the document root
+# (previously only enforced inside images/.htaccess).
+Options -Indexes

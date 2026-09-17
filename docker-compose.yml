@@ -1,0 +1,26 @@
+services:
+  security-image:
+    build: .
+    container_name: security-image
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Volumen persistente para DATA_DIR — FUERA del DocumentRoot del
+      # contenedor (/var/www/html), para que nunca sea alcanzable por HTTP
+      # aunque este contenedor sirva la app desde un subpath (ver nota en
+      # config.php sobre G3). Debe coincidir con APP_DATA_DIR en .env.
+      - security_image_data:/var/lib/security-image-data
+    networks:
+      # AJUSTA este nombre al de la red Docker donde ya vive el proxy
+      # compartido de portal-sd.securitydata.net.ec (Nginx/Apache/Traefik).
+      # Debe ser 'external: true' porque esa red la crea/gestiona el stack
+      # del proxy, no este compose.
+      - portal_proxy
+
+networks:
+  portal_proxy:
+    external: true
+
+volumes:
+  security_image_data:

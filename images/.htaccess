@@ -1,0 +1,7 @@
+# H7/H11 remediation: uploaded images no longer live in this directory (see
+# IMAGES_DIR in config.php — storage moved outside the web document root so
+# every request for an image is forced through image.php, which enforces
+# rate limiting and expiration on every single request). This folder is kept
+# only for backward-compatible deployments; deny it outright so it can never
+# again act as a direct, unrated, un-expiring bypass around image.php.
+Require all denied

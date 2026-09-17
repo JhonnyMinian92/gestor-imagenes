@@ -1,0 +1,12 @@
+{
+    "name": "securitydata/security-image",
+    "description": "Security Image",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

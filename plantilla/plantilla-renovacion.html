@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Bienvenido a Security Data</title>
+    <link rel="shortcut icon" href="https://portal-sd.securitydata.net.ec/app-security-data/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="googlebot" content="noindex" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <style type="text/css">
+      @font-face {
+        font-family: 'SFProLight';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      }
+
+      @font-face {
+        font-family: 'SFProRegular';
+        font-style: normal;
+        font-weight: 500;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      }
+
+      @font-face {
+        font-family: 'SFProMedium';
+        font-style: normal;
+        font-weight: 600;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      }
+
+      @font-face {
+        font-family: 'SFProSemiBold';
+        font-style: normal;
+        font-weight: 700;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      }
+
+      @font-face {
+        font-family: 'SFProBold';
+        font-style: normal;
+        font-weight: 900;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      }
+
+      body {
+        font-family: 'SFProLight', Arial, Helvetica, sans-serif, Verdana;
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.blk,
+        table.tblText,
+        .bmeHolder,
+        .bmeHolder1,
+        table.bmeMainColumn {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeImageCard table.bmeCaptionTable td.tblCell {
+          padding: 0px 20px 20px 20px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeImageCard table.bmeCaptionTable.bmeCaptionTableMobileTop td.tblCell {
+          padding: 20px 20px 0 20px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.bmeCaptionTable td.tblCell {
+          padding: 10px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.tblGtr {
+          padding-bottom: 20px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td.blk_container,
+        .blk_parent,
+        .bmeLeftColumn,
+        .bmeRightColumn,
+        .bmeColumn1,
+        .bmeColumn2,
+        .bmeColumn3,
+        .bmeBody {
+          display: table !important;
+          max-width: 600px !important;
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.container-table,
+        .bmeheadertext,
+        .container-table {
+          width: 95% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .mobile-footer,
+        .mobile-footer a {
+          font-size: 13px !important;
+          line-height: 18px !important;
+        }
+
+        .mobile-footer {
+          text-align: center !important;
+        }
+
+        table.share-tbl {
+          padding-bottom: 15px;
+          width: 100% !important;
+        }
+
+        table.share-tbl td {
+          display: block !important;
+          text-align: center !important;
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td.bmeShareTD,
+        td.bmeSocialTD {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td.tdBoxedTextBorder {
+          width: auto !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.blk,
+        table[name='tblText'],
+        .bmeHolder,
+        .bmeHolder1,
+        table[name='bmeMainColumn'] {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeImageCard table.bmeCaptionTable td[name='tblCell'] {
+          padding: 0px 20px 20px 20px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeImageCard table.bmeCaptionTable.bmeCaptionTableMobileTop td[name='tblCell'] {
+          padding: 20px 20px 0 20px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.bmeCaptionTable td[name='tblCell'] {
+          padding: 10px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table[name='tblGtr'] {
+          padding-bottom: 20px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td.blk_container,
+        .blk_parent,
+        [name='bmeLeftColumn'],
+        [name='bmeRightColumn'],
+        [name='bmeColumn1'],
+        [name='bmeColumn2'],
+        [name='bmeColumn3'],
+        [name='bmeBody'] {
+          display: table !important;
+          max-width: 600px !important;
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table[class='container-table'],
+        .bmeheadertext,
+        .container-table {
+          width: 95% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .mobile-footer,
+        .mobile-footer a {
+          font-size: 13px !important;
+          line-height: 18px !important;
+        }
+
+        .mobile-footer {
+          text-align: center !important;
+        }
+
+        table[class='share-tbl'] {
+          padding-bottom: 15px;
+          width: 100% !important;
+        }
+
+        table[class='share-tbl'] td {
+          display: block !important;
+          text-align: center !important;
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td[name='bmeShareTD'],
+        td[name='bmeSocialTD'] {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td[name='tdBoxedTextBorder'] {
+          width: auto !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeImageCard table.bmeImageTable {
+          height: auto !important;
+          width: 100% !important;
+          padding: 20px !important;
+          clear: both;
+          float: left !important;
+          border-collapse: separate;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblInline table.bmeImageTable {
+          height: auto !important;
+          width: 100% !important;
+          padding: 10px !important;
+          clear: both;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblInline table.bmeCaptionTable {
+          width: 100% !important;
+          clear: both;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.bmeImageTable {
+          height: auto !important;
+          width: 100% !important;
+          padding: 10px !important;
+          clear: both;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.bmeCaptionTable {
+          width: 100% !important;
+          clear: both;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.bmeImageContainer {
+          width: 100% !important;
+          clear: both;
+          float: left !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.bmeImageTable td {
+          padding: 0px !important;
+          height: auto;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td.bmeImageContainerRow {
+          padding: 0px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        img.mobile-img-large {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        img.bmeRSSImage {
+          max-width: 320px;
+          height: auto !important;
+        }
+      }
+
+      @media only screen and (min-width: 640px) {
+        img.bmeRSSImage {
+          max-width: 600px !important;
+          height: auto !important;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        table.footerMail {
+          width: 600px !important;
+        }
+      }
+
+      @media only screen and (max-width: 640px) {
+        table.footerMail {
+          width: 600px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.footerMail {
+          width: 600px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .trMargin img {
+          height: 10px;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        div.bmefooter,
+        div.bmeheader {
+          display: block !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .tdPart {
+          width: 100% !important;
+          clear: both;
+          float: left !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        table.blk_parent1,
+        table.tblPart {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .tblLine {
+          min-width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblCenter img {
+          margin: 0 auto;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblCenter,
+        .bmeMblCenter div,
+        .bmeMblCenter span {
+          text-align: center !important;
+          text-align: -webkit-center !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeNoBr br,
+        .bmeImageGutterRow,
+        .bmeMblStackCenter .bmeShareItem .tdMblHide {
+          display: none !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblInline table.bmeImageTable,
+        .bmeMblInline table.bmeCaptionTable,
+        td.bmeMblInline {
+          clear: none !important;
+          width: 50% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblInlineHide,
+        .bmeShareItem .trMargin {
+          display: none !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblInline table.bmeImageTable img,
+        .bmeMblShareCenter.tblContainer.mblSocialContain,
+        .bmeMblFollowCenter.tblContainer.mblSocialContain {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblStack > .bmeShareItem {
+          width: 100% !important;
+          clear: both !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeShareItem {
+          padding-top: 10px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .tdPart.bmeMblStackCenter,
+        .bmeMblStackCenter .bmeFollowItemIcon {
+          padding: 0px !important;
+          text-align: center !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblStackCenter > .bmeShareItem {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        td.bmeMblCenter {
+          border: 0 none transparent !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeLinkTable.tdPart td {
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+          border: 0px none transparent !important;
+          padding-bottom: 15px !important;
+          height: auto !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .tdMblHide {
+          width: 10px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeShareItemBtn {
+          display: table !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblStack td {
+          text-align: left !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblStack .bmeFollowItem {
+          clear: both !important;
+          padding-top: 10px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblStackCenter .bmeFollowItemText {
+          padding-left: 5px !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .bmeMblStackCenter .bmeFollowItem {
+          clear: both !important;
+          align-self: center;
+          float: none !important;
+          padding-top: 10px;
+          margin: 0 auto;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .tdPart > table {
+          width: 100% !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .tdPart > table.bmeLinkContainer {
+          width: auto !important;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .tdPart.mblStackCenter > table.bmeLinkContainer {
+          width: 100% !important;
+        }
+      }
+
+      .blk_parent:first-child,
+      .blk_parent {
+        float: left;
+      }
+
+      .blk_parent:last-child {
+        float: right;
+      }
+
+      td[name='bmePreHeader'] {
+        background-color: transparent;
+      }
+
+      td[name='bmeHeader'] {
+        background: #ffffff;
+      }
+
+      td[name='bmeBody'],
+      table[name='bmeBody'] {
+        background-color: #ffffff;
+      }
+
+      td[name='bmePreFooter'] {
+        background-color: #ffffff;
+      }
+
+      td[name='bmeFooter'] {
+        background-color: transparent;
+      }
+
+      td[name='tblCell'],
+      .blk {
+        font-family: initial;
+        font-weight: normal;
+        font-size: initial;
+      }
+
+      table[name='blk_blank'] td[name='tblCell'] {
+        font-family: 'SFProLight', Arial, Helvetica, sans-serif, Verdana;
+        font-size: 14px;
+      }
+
+      [name='bmeMainContentParent'] {
+        border-color: #666666;
+        border-width: 0px;
+        border-style: none;
+        border-radius: 0px;
+        border-collapse: separate;
+        border-spacing: 0px;
+        overflow: hidden;
+      }
+
+      [name='bmeMainColumnParent'] {
+        border-color: transparent;
+        border-width: 0px;
+        border-style: none;
+        border-radius: 0px;
+      }
+
+      [name='bmeMainColumn'] {
+        border-color: transparent;
+        border-width: 0px;
+        border-style: none;
+        border-radius: 0px;
+        border-collapse: separate;
+        border-spacing: 0px;
+      }
+
+      [name='bmeMainContent'] {
+        border-color: transparent;
+        border-width: 0px;
+        border-style: none;
+        border-radius: 0px;
+        border-collapse: separate;
+        border-spacing: 0px;
+      }
+
+      @media only screen and (max-width: 615px) {
+        .PermissionText {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      }
+
+      .tablaSol {
+        padding: 10px;
+      }
+
+      .tablaSol .td1 {
+        text-align: right;
+        font-size: 14px;
+        padding: 5px;
+        color: #1d5172;
+        font-weight: bold;
+        width: 50%;
+      }
+
+      .tablaSol .td2 {
+        text-align: left;
+        font-size: 14px;
+        padding: 5px;
+        color: #1d5172;
+        width: 50%;
+      }
+	  
+	  .bodyTable {
+		border-collapse:collapse; 
+		font-family:Arial, Helvetica, sans-serif; 
+		font-size:13px; 
+		line-height:10px; 
+		color:#111827;
+	  }
+    </style>
+  </head>
+
+  <body marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important; min-width: 100%">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" name="" style="background-color: #f6f7f8">
+      <tbody>
+        <tr>
+          <td width="100%" valign="top" align="center">
+            <table cellspacing="0" cellpadding="0" border="0" name="bmeMainColumnParentTable">
+              <tbody>
+                <tr>
+                  <td name="bmeMainColumnParent" style="border: 0px none transparent; border-radius: 0px; border-collapse: separate">
+                    <table name="bmeMainColumn" class="bmeHolder bmeMainColumn" style="max-width: 600px; overflow: visible; border-radius: 0px; border-collapse: separate; border-spacing: 0px" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tbody>
+                        <tr>
+                          <td width="100%" class="blk_container bmeHolder" name="bmePreHeader" valign="top" align="center" style="color: rgb(102, 102, 102); border: 0px none transparent" bgcolor="">
+                            <div style="text-align: center">
+                              <center>
+                                <a href="https://www.securitydata.net.ec/" target="_blank"><img width="200px" src="https://portal-sd.securitydata.net.ec/app-email-data/icon/logo-security-data.png" style="max-width: 250px; display: block; width: 200px; padding: 5%; image-rendering: crisp-edges" alt="SECURITY DATA" border="0" /> </a>
+                              </center>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="100%" class="bmeHolder" valign="top" align="center" name="bmeMainContentParent" style="border: 0px none rgb(102, 102, 102); border-radius: 20px; border-collapse: separate; border-spacing: 0px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 123, 255, 0.2)">
+                            <table name="bmeMainContent" style="border-radius: 0px; border-collapse: separate; border-spacing: 0px; border: 0px none transparent" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                              <tbody>
+                                <tr>
+                                  <td width="100%" class="blk_container bmeHolder" name="bmeHeader" valign="top" align="center" style="color: rgb(56, 56, 56); border: 0px none transparent; background-color: rgb(217, 237, 247)" bgcolor="#d9edf7">
+                                    <div id="dv_1" class="blk_wrapper">
+                                      <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_text">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <table cellpadding="0" cellspacing="0" border="0" width="100%" class="bmeContainerRow">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="tdPart" valign="top" align="center">
+                                                      <table cellspacing="0" cellpadding="0" border="0" width="600" name="tblText" style="float: left; background-color: #3081b5" align="left" class="tblText">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td valign="top" align="left" name="tblCell" style="padding: 20px; font-family: 'SFProLight', Arial, Helvetica, sans-serif, Verdana; font-size: 14px; font-weight: 400; color: rgb(56, 56, 56); text-align: left" class="tblCell">
+                                                              <br />
+                                                              <br />
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td width="100%" class="blk_container bmeHolder bmeBody" name="bmeBody" valign="top" align="center" style="color: rgb(56, 56, 56); border: 0px none transparent; background-color: rgb(255, 255, 255)" bgcolor="#ffffff">
+                                    <div id="dv_11" class="blk_wrapper">
+                                      <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_divider">
+                                        <tbody>
+                                          <tr>
+                                            <td class="tblCellMain" style="padding: 10px 20px">
+                                              <table class="tblLine" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-top-width: 0px; border-top-style: none; min-width: 1px">
+                                                <tbody>
+                                                  <tr>
+                                                    <td><span></span></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    <div id="dv_3" class="blk_wrapper">
+                                      <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_image">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <div style="text-align: center">
+                                                <center>
+                                                  <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/autolink-reloj.png" style="width: 70px; max-width: 100px; display: block; padding: 0" alt="SECURITY DATA" border="0" />
+                                                </center>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                  <tr>
+                                                    <td align="center" class="bmeImage" style="border-collapse: collapse; padding: 10px">
+                                                      <span style="font-size: 18px; font-family: 'SFProSemiBold', Arial, Helvetica, sans-serif, Verdana; color: #102d4f; font-weight: 800"><strong id="tituloNotificacion">[tituloNotificacion]</strong></span>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+
+                                    <div id="dv_12" class="blk_wrapper">
+                                      <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_card">
+                                        <tbody>
+                                          <tr>
+                                            <td class="bmeImageCard" align="center" style="padding-left: 20px; padding-right: 20px; padding-top: 0px; padding-bottom: 0px">
+                                              <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                  <tr>
+                                                    <td valign="top" class="bmeImageContainer" style="border-collapse: collapse; background-color: rgba(0, 0, 0, 0)" width="560">
+                                                      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td valign="top" align="center" class="tdPart">
+                                                              <table cellspacing="0" cellpadding="0" border="0" class="bmeCaptionTable" style="float: left" width="100%" align="left">
+                                                                <tbody>
+                                                                  <tr>
+                                                                    <td style="padding: 12px; font-family: 'SFProLight', Arial, Helvetica, sans-serif, Verdana; font-weight: normal; font-size: 14px; color: #102d4f; text-align: justify" name="tblCell" valign="top" align="center" class="tblCell">
+                                                                      <div>
+                                                                        <!-- START METER AQUI EL CONTENIDO -->
+                                                                        <p style="text-align: center" align="center">&iexcl;Hola <strong id="nombreUsuario">[nombreUsuario]</strong>!</p>
+                                                                        <p style="text-align: center" align="center">Tu servicio caducar&aacute; pronto.</p>
+                                                                        <p style="text-align: center; font-size: 15px" align="center"><strong>Fecha de caducidad: </strong><strong id="cuerpo2" style="color: #c70036">[cuerpo2]</strong></p>
+
+                                                                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%" style="max-width: 494px; margin: 30px auto; border: 1px solid #e5e7eb; border-radius: 20px; background-color: #ffffff; padding: 5px; font-family: Arial, Helvetica, sans-serif">
+                                                                          <tr>
+                                                                              <td colspan="2" align="center" style="text-align: center; vertical-align: middle; padding: 10px 8px">
+                                                                                <center>
+                                                                                  <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/autolink-firma.png" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 8px" alt="SECURITY DATA" border="0" />
+                                                                                  <span style="font-size: 14px; font-family: 'SFProSemiBold', Arial, Helvetica, sans-serif, Verdana; color: #1d5172; vertical-align: middle">
+                                                                                    <strong id="tipoSolicitud">[tipoSolicitud]</strong>
+                                                                                  </span>
+                                                                                </center>
+                                                                              </td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                            <td style="padding: 20px">
+                                                                              <div style="margin: 0 auto" id="cuerpo">[cuerpo]</div>
+                                                                            </td>
+                                                                          </tr>
+                                                                        </table>
+
+                                                                        <p style="text-align: center; margin: 20px" align="center"><strong>&iquest;Deseas renovar?</strong></p>
+                                                                        <p style="text-align: center; color: #6b7280; margin: 20px" align="center">Podr&aacute;s hacerlo en pocos pasos a continuaci&oacute;n:</p>
+                                                                        <div style="text-align: center">
+                                                                          <center>
+                                                                            <div style="margin: 24px 0">
+                                                                              <a href="[enlace]" style="background-color: #1d5172; color: #fff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border-radius: 22px; padding: 10px 38px; display: inline-block; font-weight: bold"> Renovar ahora <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/autolink-boton.png" alt="" style="vertical-align: middle; margin-left: 5px" /> </a>
+                                                                            </div>
+                                                                            <div style="margin: 24px 0">
+                                                                              <a href="[enlace2]" style="background-color: #c70036; color: #fff; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 14px; border-radius: 22px; padding: 10px 38px; display: inline-block; font-weight: bold"> Prefiero no hacerlo </a>
+                                                                            </div>
+                                                                          </center>
+                                                                        </div>
+                                                                      </div>
+
+                                                                      <!-- AYUDA -->
+                                                                      <hr style="border: 0; border-top: 0.5px solid #9cc4e4; width: 492px; margin: 30px auto 0" />
+                                                                      <div style="text-align: center; margin-top: 25px; margin-bottom: 30px">
+                                                                        <div style="margin-bottom: 10px">
+                                                                          <table border="0" cellpadding="0" cellspacing="0" align="center" style="margin: 0 auto">
+                                                                            <tr>
+                                                                              <td align="center" valign="middle" style="padding-right: 10px">
+                                                                                <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/necesitas-ayuda.png" alt="Ayuda" width="30" height="30" style="display: block" border="0" />
+                                                                              </td>
+                                                                              <td align="center" valign="middle">
+                                                                                <p style="font-size: 15px; color: #102d4f; margin: 0; font-family: Arial, Helvetica, sans-serif">&#191;Necesitas ayuda?</p>
+                                                                              </td>
+                                                                            </tr>
+                                                                          </table>
+                                                                        </div>
+                                                                        <p style="font-size: 14px; color: #666; margin: 0">Escr&iacute;benos por whatsapp al 098 644 2122<br />o ll&aacute;manos al 39 22 169</p>
+                                                                        <br />
+                                                                        <p style="font-size: 15px; color: #102d4f; margin: 0">&iexcl;Gracias por ser parte de nuestra comunidad!</p>
+                                                                      </div>
+                                                                      <!-- END METER AQUI EL CONTENIDO -->
+                                                                    </td>
+                                                                  </tr>
+                                                                </tbody>
+                                                              </table>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <div id="dv_4" class="blk_wrapper">
+                            <table width="600" cellspacing="0" cellpadding="0" border="0" class="blk" name="blk_divider">
+                              <tbody>
+                                <tr>
+                                  <td class="tblCellMain" style="padding: 20px 1px">
+                                    <table class="tblLine" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px">
+                                      <tbody></tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" name="" style="background-color: #f6f7f8" class="footerMail">
+      <tbody>
+        <tr>
+          <td width="100%" valign="top" align="center" style="background-color: #1d5172; padding-top: 20px; padding-bottom: 20px; color: white; font-family: 'SFProLight', Arial, Helvetica, sans-serif, Verdana; font-size: 13px; text-decoration: none; text-align: center">
+            <table class="tblLine" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top" align="center" class="tdPart" style="width: 33%">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="line-height: 20px; margin-top: 10px">
+                      <tr>
+                        <td align="center" style="vertical-align: middle">
+                          <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/icon-ws.png" width="20" style="max-width: 20px; width: 20px; margin-right: 10px; display: inline-block; vertical-align: middle" alt="SECURITY DATA" border="0" />
+                          <span style="display: inline-block; vertical-align: middle">(+593) 098 644 2122</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td valign="top" align="center" class="tdPart" style="width: 34%">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="line-height: 20px; margin-top: 10px">
+                      <tr>
+                        <td align="center" style="vertical-align: middle">
+                          <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/icon-mail.png" width="20" style="max-width: 20px; width: 20px; margin-right: 10px; display: inline-block; vertical-align: middle" alt="SECURITY DATA" border="0" />
+                          <span style="display: inline-block; vertical-align: middle"><a style="color: white; text-decoration: none" href="mailto:info@securitydata.net.ec">info@securitydata.net.ec</a></span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td valign="top" align="center" class="tdPart" style="width: 33%">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="line-height: 20px; margin-top: 10px">
+                      <tr>
+                        <td align="center" style="vertical-align: middle">
+                          <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/icon-phone.png" width="20" style="max-width: 20px; width: 20px; margin-right: 10px; display: inline-block; vertical-align: middle" alt="SECURITY DATA" border="0" />
+                          <span style="display: inline-block; vertical-align: middle">023 922 169 / 043 922 169</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="100%" align="center" style="vertical-align: middle">
+            <a href="https://www.facebook.com/firmaelectronica/?fref=ts" target="_blank"> <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/icon-facebook.png" width="35px" style="max-width: 35px; width: 35px; padding: 15px 10px" alt="SECURITY DATA" border="0" /></a>
+            <a href="https://www.instagram.com/security.data" target="_blank"> <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/icon-instagram.png" width="35px" style="max-width: 35px; width: 35px; padding: 15px 10px" alt="SECURITY DATA" border="0" /></a>
+            <a href="https://www.youtube.com/channel/UCR-zEfg-JaCGlAVJn7H-m3w" target="_blank"> <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/icon-youtube.png" width="35px" style="max-width: 35px; width: 35px; padding: 15px 10px" alt="SECURITY DATA" border="0" /></a>
+            <a href="https://www.linkedin.com/company/security-data-seguridad-en-datos-y-firma-digital-s-a-" target="_blank"> <img src="https://portal-sd.securitydata.net.ec/app-email-data/icon/icon-likedin.png" width="35px" style="max-width: 35px; width: 35px; padding: 15px 10px" alt="SECURITY DATA" border="0" /></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+/*
+ * Estilos específicos de manage-users.php (y compartidos con account.php /
+ * security-log.php, que reutilizan estas mismas clases de tarjetas/tablas).
+ *
+ * D4 remediation: este bloque vivía como <style> inline dentro del HTML,
+ * duplicado en cada carga de página. Se movió aquí tal cual.
+ *
+ * Next-level fix: el sistema de modal estático de esta página (el que se
+ * abre/cierra con la clase .active — usado para "cambiar contraseña" y
+ * "confirmar eliminación") usaba las clases .modal/.modal-content/etc.,
+ * que COLISIONABAN con el helper genérico showModal() de app.js (el que
+ * usan index.php y, desde esta ronda, el confirm de cambio de rol): ambos
+ * sistemas competían por el significado de ".modal", y el de esta página
+ * ganaba la cascada por cargarse después de style.css — dejando el modal
+ * genérico permanentemente oculto (display:none !important) en cualquier
+ * página que cargue esta hoja. Se resolvió renombrando el sistema estático
+ * de esta página a un espacio de nombres propio (.mu-modal*), dejando
+ * .modal/.modal-overlay libres para el helper genérico en todas partes.
+ */
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.users-table {
+  overflow-x: auto;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+.users-table th {
+  background: #273548;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.users-table tbody tr:hover {
+  background: #273548;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.badge-primary {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-secondary {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.mu-modal {
+  display: none !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.mu-modal.active {
+  display: flex !important;
+}
+
+.mu-modal-content {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  max-width: 480px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.mu-modal-sm {
+  max-width: 400px;
+}
+
+.mu-modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #273548;
+  border-radius: 12px 12px 0 0;
+}
+
+.mu-modal-header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #f1f5f9;
+}
+
+.mu-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #94a3b8;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: color 180ms ease;
+}
+
+.mu-modal-close:hover {
+  color: #f1f5f9;
+}
+
+#password-form,
+#delete-form {
+  padding: 1.5rem;
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+.text-muted {
+  color: #6b7280;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin: 0 0 0.25rem 0;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #334155;
+  background: #273548;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.card-body {
+  padding: 1.5rem;
+  color: #f1f5f9;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #334155;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #94a3b8;
+  font-size: 0.8125rem;
+}
+
+#alert-container {
+  margin-bottom: 1.5rem;
+}
+
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid;
+}
+
+.alert-success {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #16a34a;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #ef4444;
+}

@@ -1,0 +1,11 @@
+.git
+.gitignore
+.env
+.env.example
+vendor/
+security-image-data/
+test_ratelimit.php
+*.md
+Dockerfile
+.dockerignore
+docker-compose.yml
